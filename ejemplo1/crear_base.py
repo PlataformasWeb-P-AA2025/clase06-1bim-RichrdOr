@@ -33,5 +33,16 @@ class Saludo2(Base):
 
     def __str__(self):
         return f"{self.id} - {self.mensaje} - {self.tipo} - {self.origen}"
+'''
+class Saludo3(Base):
+    __tablename__ = 'saludo_tres'
+    id = Column(Integer, primary_key=True)
+    saludo = Column(String(200)) 
+    tipo = Column(String(200))
+    origen = Column(String(200))
+
+    def __str__(self):
+        return f"{self.id} - {self.saludo} - {self.tipo}- {self.origen}"
+'''
 
 Base.metadata.create_all(engine)
